@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+import os
+import compileall
+pyfile = os.getenv('PYFILE')
+if pyfile:
+	compiled_file = pyfile + 'c'
+	compileall.compile_file(pyfile, compiled_file)
+	print(f"Compiling {pyfile} ...")
+else:
+	print("Environment variable PYFILE is not set.")
