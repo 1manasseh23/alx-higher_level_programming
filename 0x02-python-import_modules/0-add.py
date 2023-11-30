@@ -3,7 +3,8 @@
 a = 1
 b = 2
 
-from add_0 import add
+if __name__ == "__main__ ":
+    from add_0 import add
 
-output = add(a, b)
-print("{} + {} = {}".format(a, b, output))
+    output = add(a, b)
+    print("{} + {} = {}".format(a, b, output))
