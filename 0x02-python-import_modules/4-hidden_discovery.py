@@ -5,7 +5,7 @@ import importlib.util
 import sys
 
 def print_hidden_names(file_path):
-    spec = importlib.util.spec_from_file_location("hidden_4", file_path)
+    spec = importlib.util.spec_from_file_location("hidden_4.pyc", file_path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
 
