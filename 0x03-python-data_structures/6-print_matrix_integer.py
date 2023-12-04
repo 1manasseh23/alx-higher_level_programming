@@ -3,12 +3,12 @@
 def print_matrix_integer(matrix=[[]]):
     if not matrix:
         print()
-    else:
-        for row in range(len(matrix)):
-            for number in range(len(matrix[row])):
-                if number != len(matrix[row]) - 1:
-                    endspace = " "
-                else:
-                    endspace = " "
-                print("{:d}".format(matrix[row][number]), end=endspace)
-            print()
+        return
+
+    for jack in matrix:
+        for y in range(len(jack)):
+            if y == len(jack) - 1:
+                print("{:d}".format(jack[y]), end="")
+            else:
+                print("{:d}".format(jack[y]), end=" ")
+        print()
