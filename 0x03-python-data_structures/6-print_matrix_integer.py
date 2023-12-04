@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    for row in matrix:
-        for y in range(len(row)):
-            if y < len(row) - 1:
-                print("{:d}".format(row[y]), end=" ")
+    if not matrix:
+        print()
+        return
+
+    for prt_max in matrix:
+        for trx in range(len(prt_max)):
+            if trx == len(prt_max) - 1:
+                print("{:d}".format(prt_max[trx]), end="")
             else:
-                print("{:d}".format(row[y]), end=" ")
-    return
+                print("{:d}".format(prt_max[trx]), end="")
+        print()
