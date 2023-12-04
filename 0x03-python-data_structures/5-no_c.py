@@ -4,4 +4,4 @@ def no_c(my_string):
     for glk in my_string:
         if glk != "c" and glk != "C":
             new_str = new_str + glk
-    return(new_str)
+    return new_str
