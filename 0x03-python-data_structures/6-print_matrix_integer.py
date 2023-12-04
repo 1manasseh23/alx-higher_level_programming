@@ -4,10 +4,10 @@ def print_matrix_integer(matrix=[[]]):
         print()
         return
 
-    for prt_max in matrix:
-        for trx in enumerate(prt_max):
-            if trx < len(prt_max) - 1:
-                print("{:d}".format(prt_max[trx]), end="")
+    for jack in matrix:
+        for y in range(len(jack)):
+            if y == len(jack) - 1:
+                print("{:d}".format(jack[y]), end="")
             else:
-                print("{:d}".format(prt_max[trx]), end="")
+                print("{:d}".format(jack[y]), end=" ")
         print()
