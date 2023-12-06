@@ -1,4 +1,4 @@
-#!/usr/bin/pyhon3
+#!/usr/bin/python3
 def search_replace(my_list, search, replace):
     cl_list = []
     for list1 in my_list:
