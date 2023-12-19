@@ -4,4 +4,4 @@
 class Square:
     """This is a class of square"""
     pass
-"""This is pass to square
+"""This is pass to square"""
