@@ -44,5 +44,17 @@ class Square:
             for _ in range(self.__position[1]):
                 print()
             for _ in range(self.__size):
-                print(" " * self.__position[0], end="")
-                print("#" * self.size)
+                print(" " * self.__position[0] + "#" * self.__size)
+
+    def __str__(self):
+        square_representation = ""
+        if self.__size == 0:
+            square_representation += "\n"
+        else:
+            for _ in range(self.__position[1]):
+                square_representation += "\n"
+            square_representation = ""
+            for _ in range(self.__size):
+                line = " " * self.__position[0] + "#" * self.__size + "\n"
+                square_representation += line
+            return square_representation.rstrip()
