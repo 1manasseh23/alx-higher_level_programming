@@ -4,6 +4,6 @@
 class Square:
     """This is a class of square
     Attributes:
-    No attrinbutes
+        No attrinbute
     """
     pass
