@@ -9,9 +9,8 @@ class Square:
     """
     Instantiation with optional size and optional position
     Attribute:
-        position
-    Attribute:
-        size
+        position: This is Private instance
+        size: This is Private instance attribut
     """
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
