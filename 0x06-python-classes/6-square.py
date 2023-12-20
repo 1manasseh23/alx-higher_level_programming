@@ -1,14 +1,30 @@
 #!/usr/bin/python3
-
+"""
+This Write a class Square that defines
+a square by: (based on 5-square.py)
+"""
 class Square:
+    """
+    Instantiation with optional size and optional position
+    Attribute:
+        size
+    """
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
-
+    """
+    property to retrieve it
+    Attribute:
+        __size
+    """
     @property
     def size(self):
         return self.__size
-
+    """
+    property setter to set it
+    Attribute:
+        value
+    """
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -17,11 +33,19 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-
+    """
+    property to retrieve it
+    Attribute:
+        __size
+    """
     @property
     def position(self):
         return self.__position
-
+    """
+    property setter to set it
+    Attribute:
+        value
+    """
     @position.setter
     def position(self, value):
         if not (
@@ -32,10 +56,18 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-
+    """
+    Public instance method that returns the current square area
+    Attribute:
+        __size
+    """
     def area(self):
         return self.__size ** 2
-
+    """
+    Public instance method that prints in stdout the square with the character #
+    Attribute:
+        __size
+    """
     def my_print(self):
         if self.__size == 0:
             print()
