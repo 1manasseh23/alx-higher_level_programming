@@ -9,6 +9,7 @@ class Square:
     """
     Instantiation with optional size and optional position
     Attribute:
+        position
         size
     """
     def __init__(self, size=0, position=(0, 0)):
