@@ -67,7 +67,8 @@ class Square:
     def area(self):
         return self.__size ** 2
     """
-    Public instance method that prints in stdout the square with the character #
+    Public instance method that prints in stdout the square
+    with the character #
     Attribute:
         __size
     """
