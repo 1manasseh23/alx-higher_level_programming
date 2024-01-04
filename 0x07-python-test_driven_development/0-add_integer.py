@@ -8,7 +8,7 @@ def add_integer(a, b=98):
     a (int): An integer.
     b (int): An integer. Defaults to 98.
 
-    Returs:
+    Retuns:
     int: The sum of a and b.
 
     Raises:
@@ -19,7 +19,3 @@ def add_integer(a, b=98):
     if type(b) not in [int, float]:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
-
-if __name__ == "__main__":
-    import doctest
-    doctest.add_integer(0-add_integer.txt)
