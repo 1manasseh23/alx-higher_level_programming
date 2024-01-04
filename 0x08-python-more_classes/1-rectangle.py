@@ -16,28 +16,6 @@ class Rectangle:
         self.height = height
     """
     property to retrieve it
-        Attribute:
-            self.width
-    """
-    @property
-    def width(self):
-        return self.__width
-    """
-    property setter to set it
-    Attribute:
-        value
-        intenger
-    """
-    @width.setter
-    def width(self, value):
-        if not isinstance(value, int):
-            raise TypeError("wtdth must be an integer")
-        elif value < 0:
-            raise ValueError("width must be >= o")
-        else:
-            self.__width = value
-    """
-    property to retrieve it
     Attribute:
         self.__height
     """
@@ -58,3 +36,25 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.___height = value
+    """
+    property to retrieve it
+        Attribute:
+            self.width
+    """
+    @property
+    def width(self):
+        return self.__width
+    """
+    property setter to set it
+    Attribute:
+        value
+        intenger
+    """
+    @width.setter
+    def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError("wtdth must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= o")
+        else:
+            self.__width = value
