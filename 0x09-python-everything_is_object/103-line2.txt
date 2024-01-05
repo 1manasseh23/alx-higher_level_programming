@@ -1,0 +1,1 @@
+The second line of the script creates one integer object with the value 1.
