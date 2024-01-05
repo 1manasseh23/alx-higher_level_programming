@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-Copy_list - A function that returns a copy of a list
+This is a function that returns a copy of a list
 """
-def copy_list(l):
-    return l[:]
+
+
+def copy_list(my_list):
+    return my_list[:]
