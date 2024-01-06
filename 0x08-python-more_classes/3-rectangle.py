@@ -30,7 +30,7 @@ class Rectangle:
         value
         integer
     """
-    @wiproperty
+    @width.setter
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
