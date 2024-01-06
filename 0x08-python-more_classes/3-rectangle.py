@@ -5,7 +5,6 @@ based on 2-rectangle.py
 """
 
 
-
 class Rectangle:
     """
     Instantiation with optional width and height
