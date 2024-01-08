@@ -12,6 +12,8 @@ class BaseGeometry:
 This Rectangle is a class that inherits from BaseGeometry
 Attribute:
     baseGeometry
+    width
+    height
 """
 
 
