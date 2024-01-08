@@ -10,8 +10,7 @@ Returns: A list object
 
 def lookup(obj):
     """
-    Attribute:
-        obj
-    Returns: A list object
+    Returns  the list of available attributes and
+    methods of an object
     """
     return [attr for attr in dir(obj)]
