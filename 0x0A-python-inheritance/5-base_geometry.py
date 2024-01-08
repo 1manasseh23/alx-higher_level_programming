@@ -6,6 +6,8 @@ This an empty class BaseGeometry
 
 class BaseGeometry:
     pass
+
+
 """
 This Rectangle is a class that inherits from BaseGeometry
 Attribute:
@@ -21,8 +23,6 @@ class Rectangle(BaseGeometry):
         width
         height
     """
-
-
     def __init__(self, width, height):
         self.width = width
         self.height = heigh
