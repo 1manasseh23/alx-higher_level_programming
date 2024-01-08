@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+is_kind_of_class a function that returns True
+Attribute:
+    obj
+    a_class
+"""
+
 
 def is_kind_of_class(obj, a_class):
     """
