@@ -19,7 +19,7 @@ class Rectangle(BaseGeometry):
     """
     This is a function that initializes the correspornding
     attribute of the rectangle object
-    Args:
+    Attribute:
         width
         height
     """
