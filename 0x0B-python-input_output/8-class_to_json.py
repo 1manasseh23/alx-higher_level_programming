@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+Its a function that returns the dictionary description
+with simple data structure
+Argument:
+    obj
+"""
+
 
 def class_to_json(obj):
     """
