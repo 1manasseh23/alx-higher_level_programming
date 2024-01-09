@@ -7,5 +7,8 @@ def class_to_json(obj):
     integer and boolean for JSON serialization of an object
     Argument:
         obj
+    Returns:
+        A diictonary representation of the object that
+        can be converted to JSON
     """
     return obj.__dict__
