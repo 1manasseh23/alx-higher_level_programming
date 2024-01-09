@@ -9,6 +9,7 @@ import sys
 import json
 from typing import List
 
+
 def save_to_json_file(my_obj: List, filename: str) -> None:
     """
     Write an object to a file using JSON representation
@@ -20,6 +21,7 @@ def save_to_json_file(my_obj: List, filename: str) -> None:
     """
     with open(filename, mode='w', encoding='utf-8') as f:
         json.dump(my_obj, f)
+
 
 def load_from_json_file(filename: str) -> List:
     """
@@ -33,6 +35,7 @@ def load_from_json_file(filename: str) -> List:
     """
     with open(filename, mode='r', encoding='utf-8') as f:
         return json.load(f)
+
 
 if __name__ == '__main__':
     filename = 'add_item.json'
