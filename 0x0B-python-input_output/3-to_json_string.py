@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""
+Module in Python that provides methods
+for working with JSON data
+"""
+
+
 import json
+
+
 """
 a function that returns the JSON representation
 of an object (string)
