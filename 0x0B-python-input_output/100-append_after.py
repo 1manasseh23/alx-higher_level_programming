@@ -10,6 +10,13 @@ Arguments:
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """
+    Its insert text after each line containing a specifict string
+    Arguments:
+        filename
+        search_string
+        new_string
+    """
     with open(filename, mode='r+', encoding='utf-8') as f:
         lines = f.readlines()
         f.seek(0)
