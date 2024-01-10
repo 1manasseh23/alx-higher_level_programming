@@ -18,7 +18,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-
     """
     Public method that retrieve a dictionary representation
     of a Student instance (same as 8-class_to_json.py
