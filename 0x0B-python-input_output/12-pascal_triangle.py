@@ -8,6 +8,13 @@ Arguments:
 
 
 def pascal_triangle(n):
+    """
+    List of lists of integers representing the Pascal’s
+    triangle of n
+    Attribute:
+        n
+    Returns an empty list if n <= 0
+    """
     if n <= 0:
         return []
 
