@@ -1,6 +1,21 @@
 #!/usr/bin/python3
+"""
+Module provides access to some variables used or
+maintained by the interpreter
+"""
+
 
 import sys
+
+
+"""
+script that reads stdin line by line and computes metrics
+Input format:
+    IP Address
+    status code
+    file size
+"""
+
 
 total_file_size = 0
 status_codes = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0, '405': 0, '500': 0}
