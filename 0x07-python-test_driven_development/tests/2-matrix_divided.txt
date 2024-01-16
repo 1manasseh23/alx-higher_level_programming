@@ -7,5 +7,11 @@ Using ``matrix_divided``
 This is an matrix_divided text file in reStructuredText format.  First import
 ``matrix_divided`` from the ``2-matrix_divided`` module:
 
-    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
 
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+	>>> say_my_name("Walter", "White")
+	My name is Walter White
+	>>> say_my_name("Bob")
+	My name is Bob
