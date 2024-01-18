@@ -5,6 +5,7 @@ This is to import our base.py module from models directory
 """
 import uuid
 from models.base import Base
+import csv
 """
 Class Rectangle inherits from Base
 """
@@ -27,32 +28,32 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+        self.id = id
+
+    """
+    This is a function that return dictionary
+    """
+    def to_dictionary(self):
+        """
+        Return:
+            id
+            width
+            height
+            x
+            y
+        """
+        return {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+            }
+
         if id is None:
             self.id = uuid.uuid4()
         else:
             self.id = id
-
-    """
-    Update the class Rectangle by adding validation of all
-    setter methods and instantiation 'id excluded'
-    Arguments:
-        args
-        kwargs
-    """
-    def update(self, *args, **kwargs):
-        if len(args) > 0:
-            self.id = args[0]
-        if len(args) > 1:
-            self.width = args[1]
-        if len(args) > 2:
-            self.height = args[2]
-        if len(args) > 3:
-            self.x = args[3]
-        if len(args) > 4:
-            self.y = args[4]
-
-        for key, value in kwargs.items():
-            setattr(self, key, value)
 
     """
     This is a method to get the attribute width
@@ -147,6 +148,28 @@ class Rectangle(Base):
             self.__y = value
 
     """
+    Update the class Rectangle by adding validation of all
+    setter methods and instantiation 'id excluded'
+    Arguments:
+        args
+        kwargs
+    """
+    def update(self, *args, **kwargs):
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.width = args[1]
+        if len(args) > 2:
+            self.height = args[2]
+        if len(args) > 3:
+            self.x = args[3]
+        if len(args) > 4:
+            self.y = args[4]
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+    """
     Thi si a function that returns the area value of
     the Rectangle instance
     Return:
@@ -162,25 +185,40 @@ class Rectangle(Base):
     def display(self):
         for i in range(self.height):
             print("#" * self.width)
+
+    def display(self):
         for i in range(self.y):
             print()
         for i in range(self.height):
             print(" " * self.x + "#" * self.width)
 
     """
+    def to_csv_dict(self):
+        return [self.id, self.width, self.height, self.x, self.y]
+
+    @classmethod
+    def from_csv_dict(cls, csv_dict):
+        return {"id": int(csv_dict[0]), "width": int(csv_dict[1]),
+        "height": int(csv_dict[2]), "x": int(csv_dict[3]),
+        "y": int(csv_dict[4])}
+
+    @classmethod
+    def load_from_file_csv(cls):
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, mode="r") as file:
+                reader = csv.reader(file)
+                return [cls.create(**row) for row in reader]
+        except FileNotFoundError:
+            return []
+    """
+
+    """
     This functio is a class Rectangle by overriding the __str__ method
     Return:
         f'Rectangle id {x}/{y} - {width}/{height}'
     """
+
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
            f"{self.width}/{self.height}"
-
-
-"""
-    def display(self):
-        for i in range(self.y):
-            print()
-        for i in range(self.height):
-            print(" " * self.x + "#" * self.width )
-"""
