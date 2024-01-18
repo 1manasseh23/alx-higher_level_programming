@@ -1,23 +1,20 @@
 #!/usr/bin/python3
-from turtle import Turtle, Screen
-import csv
-import json
-
 """
 This provides a way to generate unique
 identifiers (UUIDs) for objects
 """
-
+from turtle import Turtle, Screen
+import csv
+import json
 import uuid
-
-"""
-Base is a perent class with a private class attribute
-Attribute:
-    __nb_objects
-"""
 
 
 class Base:
+    """
+    Base is a perent class with a private class attribute
+    Attribute:
+        __nb_objects
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -32,15 +29,13 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    """
-    This i a function that return the JSON string
-    representation of dictionaries
-    Arguments:
-        list_dictionaries
-    """
     @staticmethod
     def to_json_string(list_dictionaries):
         """
+        This i a function that return the JSON string
+        representation of dictionaries
+        Arguments:
+            list_dictionaries
         Checks list_dictionaries
         Return:
             []
@@ -49,15 +44,15 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
-    """
-    This is a function that Write the JSON string
-    representation of list_objs to a file
-    Arguments:
-        cls
-        list_objs
-    """
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+        This is a function that Write the JSON string
+        representation of list_objs to a file
+        Arguments:
+            cls
+            list_objs
+        """
         if list_objs is None:
             list_objs = []
         filename = f"{cls.__name__}.json"
@@ -66,27 +61,27 @@ class Base:
         with open(filename, "w") as file:
             file.write(json_data)
 
-    """
-    This function return list of  the JSON string
-    representation of json_string
-    Arguments:
-        json_string
-    """
     @staticmethod
     def from_json_string(json_string):
+        """
+        This function return list of  the JSON string
+        representation of json_string
+        Arguments:
+            json_string
+        """
         if json_string is None or not json_string:
             return []
         return json.loads(json_string)
 
-    """
-    This is a class method  that returns an instance
-    with all attributes already set
-    Arguments:
-        cls
-        dictionary
-    """
     @classmethod
     def create(cls, **dictionary):
+        """
+        This is a class method  that returns an instance
+        with all attributes already set
+        Arguments:
+            cls
+            dictionary
+        """
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -97,16 +92,14 @@ class Base:
         dummy_instance.update(**dictionary)
         return dummy_instance
 
-    """
-    This is a class method that returns a list of instances
-    Arguments:
-        cls
-    Return:
-        []
-    """
     @classmethod
     def load_from_file(cls):
         """
+        This is a class method that returns a list of instances
+        Arguments:
+            cls
+        Return:
+            []
         Try file and return an empty list
         """
         filename = f"{cls.__name__}.json"
