@@ -11,8 +11,5 @@
 -- Parameter: The database name will be passed as an argument
 -- Example Usage: cat 3-list_tables.sql | mysql -hlocalhost -uroot -p mysql
 
--- List all tables in the specified database
-USE `mysql`;
-
 -- Fetch and display table names
-SHOW TABLES;
+SHOW TABLES FROM mysql;
