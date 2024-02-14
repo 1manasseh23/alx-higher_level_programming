@@ -5,17 +5,6 @@ import unittest
 import warnings
 
 class Testbase(unittest.TestCase):
-    """
-    def setUp(self):
-        self.a = Base()
-        self.b = Base()
-
-    def test_isEquals(self):
-        a = Base()
-        b = Base(12)
-        self.assertEqual(self.a.id, 1)
-        self.assertEqual(self.b.id, 12)
-        """
 
     def test_equal(self):
         self.assertEqual(1, 1)
