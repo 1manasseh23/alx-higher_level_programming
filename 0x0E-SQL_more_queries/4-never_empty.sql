@@ -1,6 +1,4 @@
--- Database name passed as and argument
-hbtn_0d_2="$1"
-
+-- 4-never_empty.sql
 
 -- Create the id_not_null table
 CREATE TABLE IF NOT EXISTS id_not_null (
