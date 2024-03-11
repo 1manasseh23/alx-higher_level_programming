@@ -1,6 +1,8 @@
 #!/usr/bin/node
 
-// This a script that prints the first argument passed to it
+/* This a script that prints the
+ * first argument passed to it
+ */
 
 const args = process.argv.slice(2);
 
