@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-
-import MySQLdb
-import sys
 """
 This  script that lists all states from the database hbtn_0e_0_usa
 """
+import MySQLdb
+import sys
+
 if __name__ == "__main__":
     # Get MySQL credentials from command line arguments
     username, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
