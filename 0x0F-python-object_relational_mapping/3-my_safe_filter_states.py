@@ -10,7 +10,8 @@ import MySQLdb
 if __name__ == "__main__":
     # Check if correct number of arguments is provided
     if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <database> <state_name>".format(sys.argv[0]))
+        print("Usage: {} <username> <password> <database> <state_name>"
+              .format(sys.argv[0]))
         sys.exit(1)
 
     username, password, database, state_name = sys.argv[1:]
@@ -22,7 +23,10 @@ if __name__ == "__main__":
         cursor = db.cursor()
 
         # Execute query (safe from SQL injection)
-        cursor.execute("SELECT * FROM states WHERE name=%s ORDER BY id ASC", (state_name,))
+        cursor.execute(
+                "SELECT * FROM states WHERE name=%s ORDER BY id ASC",
+                (state_name,)
+                )
         results = cursor.fetchall()
 
         # Display results
