@@ -8,7 +8,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
+
 Base = declarative_base()
+
 
 class State(Base):
     """
@@ -17,6 +19,7 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
+
 
 if __name__ == "__main__":
     # Check if correct number of arguments is provided
@@ -28,7 +31,8 @@ if __name__ == "__main__":
 
     try:
         # Connect to MySQL server
-        engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(username, password, database),
+        engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                               .format(username, password, database),
                                pool_pre_ping=True)
         Base.metadata.create_all(engine)
         print("Table 'states' created successfully!")
