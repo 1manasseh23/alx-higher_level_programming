@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-
+"""
+Check if all required arguments are provided
+Create an engine to connect to the MySQL server
+Create a session to interact with the database
+Fetch the first State object
+"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
-if __name__ == "__main__":
-    """
-    Check if all required arguments are provided
-    Create an engine to connect to the MySQL server
-    Create a session to interact with the database
-    Fetch the first State object
-    """
 
+if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage: {} <mysql_username> <mysql_password> <database_name>"
               .format(sys.argv[0]))
