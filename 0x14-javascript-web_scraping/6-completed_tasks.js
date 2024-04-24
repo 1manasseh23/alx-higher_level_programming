@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /*
 * This a script that computes the number of tasks completed by user id.
 
@@ -11,26 +11,21 @@ const request = require('request');
 
 const apiUrl = process.argv[2];
 
-// Make an HTTP request to the provided API URL
 request(apiUrl, (error, response, body) => {
   if (error) {
     console.error(`Error: ${error}`);
     return;
   }
 
-  // Parse the response body (assuming it's in JSON format)
   const tasks = JSON.parse(body);
 
-  // Initialize an object to store completed task counts by user ID
   const completedTasksByUserId = {};
 
-  // Iterate through the tasks
   tasks.forEach((task) => {
     const userId = task.userId;
     const taskId = task.id;
     const completed = task.completed;
 
-    // If the task is completed, increment the count for the user ID
     if (completed) {
       if (!completedTasksByUserId[userId]) {
         completedTasksByUserId[userId] = 1;
@@ -40,7 +35,5 @@ request(apiUrl, (error, response, body) => {
     }
   });
 
-  // Print the results
   console.log(completedTasksByUserId);
 });
-
