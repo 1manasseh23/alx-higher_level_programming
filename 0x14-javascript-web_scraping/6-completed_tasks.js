@@ -5,8 +5,6 @@
  * Only print users with completed task
  * You must use the module request
  */
-
-
 const request = require('request');
 const apiUrl = process.argv[2];
 
