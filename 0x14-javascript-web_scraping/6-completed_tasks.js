@@ -8,6 +8,7 @@
 * You must use the module request
 */
 const request = require('request');
+
 const apiUrl = process.argv[2];
 
 request(apiUrl, (error, response, body) => {
@@ -17,6 +18,7 @@ request(apiUrl, (error, response, body) => {
   }
 
   const tasks = JSON.parse(body);
+
   const completedTasksByUserId = {};
 
   tasks.forEach((task) => {
