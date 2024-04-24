@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /*
 * This a script that prints the title of a Star Wars movie where the episode number matches a given integer.
 
@@ -24,3 +24,4 @@ request(url, (error, response, body) => {
     console.error(`Error: No title found for movie with ID ${id}`);
   }
 });
+
