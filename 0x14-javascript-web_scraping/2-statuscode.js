@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /*
 * This a script that display the status code of a GET request.
 
