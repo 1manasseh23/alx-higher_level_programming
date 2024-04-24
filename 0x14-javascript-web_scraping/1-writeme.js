@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#/usr/bin/node
 
 const fs = require('fs');
 
@@ -13,3 +13,4 @@ function writeToFile(filePath, stringToWrite) {
 }
 
 writeToFile(process.argv[2], process.argv[3]);
+
