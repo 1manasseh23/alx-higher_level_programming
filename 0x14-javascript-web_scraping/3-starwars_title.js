@@ -6,6 +6,7 @@
 * You must use the Star wars API with the endpoint https://swapi-api.alx-tools.com/api/films/:id
 * You must use the module request
 */
+
 const request = require('request');
 const id = process.argv[2];
 
@@ -24,4 +25,3 @@ request(url, (error, response, body) => {
     console.error(`Error: No title found for movie with ID ${id}`);
   }
 });
-
