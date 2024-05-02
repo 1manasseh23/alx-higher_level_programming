@@ -1,5 +1,3 @@
-// 0-script.js
-
 // Select the <header> element using document.querySelector
 const headerElement = document.querySelector("header");
 

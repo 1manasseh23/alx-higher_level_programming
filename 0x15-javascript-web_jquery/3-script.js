@@ -1,5 +1,3 @@
-// 3-script.js
-
 // Wait for the document to be ready
 $(document).ready(function () {
   // Get the DIV#red_header element

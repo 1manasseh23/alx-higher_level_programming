@@ -1,5 +1,3 @@
-// 5-script.js
-
 // Wait for the document to be ready
 $(document).ready(function() {
   // When the user clicks on the DIV#add_item

@@ -1,5 +1,3 @@
-// 4-script.js
-
 // Wait for the document to be ready
 $(document).ready(function () {
   // Get the <header> element

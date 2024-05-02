@@ -1,5 +1,3 @@
-// 1-script.js
-
 // Wait for the document to be ready
 $(document).ready(function() {
     // Select the <header> element using its tag name
