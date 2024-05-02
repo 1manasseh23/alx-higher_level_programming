@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Holberton School</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  </head>
-  <body>
-    <header> 
-      Star Wars movies
-    </header>
-    <br />
-    <ul id="list_movies">
-    </ul>
-    <br />
-    <footer>
-      Holberton School - 2017
-    </footer>
-    <script type="text/javascript" src="8-script.js"></script>
-  </body>
-</html>
-guillaume@ubuntu:~/0x15$
+// Ensures that the script runs after the HTML document has finished loading.
+
+$(document).ready(function() {
+  //  Initiates an AJAX request to the specified URL.
+  $.ajax({
+    url: 'https://swapi-api.alx-tools.com/api/films/?format=json',
+    type: 'GET',
+    success: function(data) {
+      $.each(data.results, function(index, movie) {
+        $('#list_movies').append('<li>' + movie.title + '</li>');
+      });
+    },
+    error: function() {
+      $('#list_movies').append('<li>Error fetching movie data</li>');
+    }
+  });
+});
